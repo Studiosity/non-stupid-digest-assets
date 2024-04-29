@@ -40,7 +40,7 @@ module NonStupidDigestAssets
     private
 
     def destupidify_digest_asset(digest_path, non_digest_path)
-      if File.exists? digest_path
+      if File.exist? digest_path
         logger.debug "Writing #{non_digest_path}"
         if NonStupidDigestAssets.destupidify_mode == :move
           FileUtils.mv digest_path, non_digest_path
